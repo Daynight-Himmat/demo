@@ -45,7 +45,7 @@ class _HomePageState extends State<HomePage> {
                           ),
                           child: ClipRRect(
                               borderRadius: borderRadius,
-                              child: Image.network(url, fit: BoxFit.cover,)
+                              child: CacheImage(url: url,)
                           ),
                         )
                     );
@@ -58,6 +58,8 @@ class _HomePageState extends State<HomePage> {
           const TextLabel(label: "Vertical View",),
           Expanded(
             child: CustomScrollView(
+              shrinkWrap: true,
+              primary: true,
               slivers: <Widget>[
                 SliverList.builder(
                   itemCount: 30,
@@ -65,13 +67,14 @@ class _HomePageState extends State<HomePage> {
                     return Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Container(
+                          height: 150,
                           decoration: BoxDecoration(
                               color: Colors.red,
                               borderRadius: borderRadius
                           ),
                           child: ClipRRect(
                               borderRadius: borderRadius,
-                              child: Image.network(url, fit: BoxFit.cover,)
+                              child:  CacheImage(url: url,)
                           ),
                         )
                     );
@@ -99,7 +102,7 @@ class _HomePageState extends State<HomePage> {
                           ),
                           child: ClipRRect(
                               borderRadius: borderRadius,
-                              child: Image.network(url, fit: BoxFit.cover,)
+                              child:  CacheImage(url: url,)
                           ),
                         )
                     );
