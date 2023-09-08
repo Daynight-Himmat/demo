@@ -80,7 +80,15 @@ class _HomePageState extends State<HomePage> {
           leading: IconButton(icon: Icon(Icons.menu), onPressed: () async {
             return await getData();
             // return Scaffold.of(context).openDrawer();
-          },)
+          },),
+        centerTitle: true,
+        title: const Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(Icons.design_services),
+            Text('EShakehands' ,style: TextStyle(color: ColorConstants.primaryColor),)
+          ],
+        ),
       ),
       body: Container(
         height: SizeConfig.screenHeight,
