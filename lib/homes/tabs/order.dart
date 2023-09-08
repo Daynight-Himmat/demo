@@ -12,11 +12,11 @@ class _OrderPageState extends State<OrderPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Order Page'),
+        title: const Text('Transaction Page'),
       ),
       body: Container(
         child: Center(
-          child: Text('Order')
+          child: Text('Transaction')
         )
       ),
     );

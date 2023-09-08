@@ -40,6 +40,8 @@ dependencies:
   fluttertoast: ^8.2.2
   faker: ^2.1.0
   cached_network_image: ^3.2.3
+  persistent_bottom_nav_bar: ^5.0.2
+  flutter_toggle_tab: ^1.4.1
 
 dev_dependencies:
   flutter_test:

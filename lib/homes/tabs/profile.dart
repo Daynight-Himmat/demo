@@ -40,38 +40,15 @@ class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: ColorConstants.whiteColor,
+      backgroundColor: ColorConstants.primaryWhite,
       appBar: AppBar(
-        backgroundColor: ColorConstants.whiteColor,
+        backgroundColor: ColorConstants.primaryWhite,
         title: const Text('Profile Page'),
       ),
-      body: SafeArea(
-        child: Container(
-          height: SizeConfig.screenHeight,
-            width: SizeConfig.screenWidth,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                ListTile(
-                  leading: const CircleAvatar(
-                    backgroundColor: ColorConstants.textHintColor,
-                    child: Icon(Icons.person),
-                  ),
-                  title:  Text(userName ?? "", style: const TextStyle(
-                      fontSize: 14, color: ColorConstants.primaryBlack),),
-                ),
-                Sized.sHeight(10),
-                ButtonFile(
-                    voidCallback: () async {
-                      Provider.of<Preference>(context, listen: false).setIsLoggedIn(false);
-                      Routes.removeRoute(context: context,  widgets: const SignIn());
-                    },
-                    buttonName: "Log out",
-                )
-              ],
-            )
-        ),
+      body: Container(
+          child: Center(
+              child: Text('Profile')
+          )
       ),
     );
   }

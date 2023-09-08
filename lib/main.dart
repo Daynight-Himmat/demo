@@ -1,4 +1,5 @@
 import 'package:demo/Auth/sign_in.dart';
+import 'package:demo/constants/theme_constants.dart';
 import 'package:flutter/foundation.dart';
 import 'homes/dashboard.dart';
 import 'packages/packages.dart';
@@ -21,21 +22,9 @@ class MyApp extends StatelessWidget {
         builder: (BuildContext context) {
           BuildContext rootContext = context;
           return MaterialApp(
-            theme: ThemeData(
-              colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-              useMaterial3: true,
-              bottomNavigationBarTheme: BottomNavigationBarThemeData(
-                elevation: 10,
-                backgroundColor: ColorConstants.primaryWhite,
-                landscapeLayout: BottomNavigationBarLandscapeLayout.spread,
-                type: BottomNavigationBarType.fixed,
-                enableFeedback: true,
-                selectedItemColor: ColorConstants.primaryBlack,
-                unselectedItemColor: ColorConstants.primaryBlack.withOpacity(0.5),
-              ),
-
-            ),
-            home: const Splash(),
+            theme: StyleClass.themeData(context),
+            debugShowCheckedModeBanner: false,
+            home: const Dashboard(),
           );
         },
       ),

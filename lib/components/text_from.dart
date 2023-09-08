@@ -1,3 +1,4 @@
+import 'package:demo/auth/auth_packages.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -92,7 +93,10 @@ class ITTextField extends StatelessWidget {
         readOnly: readOnly ?? false,
         focusNode: focusNode,
         textAlign: align ?? TextAlign.left,
-        style: Theme.of(context).textTheme.labelSmall,
+        style:Theme.of(context).textTheme.headlineSmall?.copyWith(
+            fontSize:14,
+            color: ColorConstants.textDarkBlack
+        ),
         maxLines: maxLine ?? 1,
         minLines: minLine ?? 1,
         onChanged: onChanged,
@@ -104,7 +108,13 @@ class ITTextField extends StatelessWidget {
         decoration: InputDecoration(
           counterText: "",
           hintText: hintText,
+          helperStyle: Theme.of(context).textTheme.titleMedium,
           labelText: labelText,
+          hintStyle: Theme.of(context).textTheme.headlineSmall?.copyWith(
+            fontSize:14,
+            color: ColorConstants.textLightBlack3
+          ),
+
           labelStyle: Theme.of(context).textTheme.labelSmall,
           contentPadding: const EdgeInsets.fromLTRB(0, 10, 0, 10),
           errorText: errorText,
